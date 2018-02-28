@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es"> 
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+  	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/dialog.css">
+	<link rel="stylesheet" type="text/css" href="css/simplePagination.css">
+    <link rel="stylesheet" href="css/toastr.min.css">
+	<title>VotaPelículas.com - Sección de Votación</title>    
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script> 
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/toastr.min.js"></script>
+	<script type="text/javascript" src="js/simplePagination.js"></script>
+	<script type="text/javascript" src="js/config/config.js"></script>
+	<script type="text/javascript" src="js/localSaver/LocalSaver.js"></script>
+	<script type="text/javascript" src="js/objects/Comic.js"></script>
+	<script type="text/javascript" src="js/objects/Character.js"></script>
+	<script type="text/javascript" src="js/objects/User.js"></script>
+	<script type="text/javascript" src="js/api/getCharacters.js"></script>
+	<script type="text/javascript" src="js/api/getComics.js"></script>
+	<script type="text/javascript" src="js/voteDialog/voteDialog.js"></script>
+	<script type="text/javascript" src="js/pagination/pagination.js"></script>
+	<script type="text/javascript" src="js/idAsigner/IdAsigner.js"></script>
+	<script type="text/javascript" src="js/sectionToggler/toggleSection.js"></script>
+	<script type="text/javascript" src="js/main/main.js"></script>
+</head>
+<body>
+	<header>
+		<img src="img/logo.jpg" alt="VotaMarvelPuntoCom "/>
+		<h1 role=>VotaMarvel.com</h1>
+	</header>
+	<section role="region" class="comics-section" aria-label="Sección de Comics ">
+		<div class="section-title">
+			<h2>Cómics para Votar</h2>
+			<button id="toggleCharacters" aria-label="Votación de comics. Pulsa enter para cambiar a votación de personajes." tabindex="1">Votar Personajes</button>
+		</div>
+		<div class="content comics-container">
+		</div>
+		<div class="comics-pagination">
+
+		</div>
+	</section>
+	<section role="region" class="characters-section" aria-label="Sección de Personajes ">
+		<div class="section-title">
+			<h2>Personajes para Votar</h2>
+			<button id="toggleComics" aria-label="Votación de Personajes. Pulsa enter para cambiar a votación de comics." tabindex="1">Votar Comics</button>
+		</div>
+		<div class="content characters-container">
+		</div>
+		<div class="characters-pagination">
+
+		</div>
+	</section>
+	<footer role="contentinfo" >
+		<h1>VotaMarvel.com Copyright ©</h1>
+	</footer >
+	<div id="dialog-form" title="Votar Película">
+		<img class="item-image" src="" height="250px"/>
+		<p class="validateTips">Nombre, email y teléfono requeridos.</p>
+		<form>
+			<fieldset>
+				<label for="name" aria-label="Introduce Nombre" aria-hidden="true" >Nombre</label>
+				<input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+				<label for="email" aria-label="Introduce Email" aria-hidden="true" >Email</label>
+				<input type="text" name="email" id="email"  class="text ui-widget-content ui-corner-all">
+				<label for="phone" aria-label="Introduce Teléfono" aria-hidden="true"  >Phone</label>
+				<input type="text" name="phone" id="phone"  class="text ui-widget-content ui-corner-all">
+
+				<!-- Allow form submission with keyboard without duplicating the dialog button -->
+				<input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

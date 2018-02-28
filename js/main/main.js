@@ -1,0 +1,5 @@
+$(function(){
+  paginate();
+  getCharacters();
+  getComics();
+});

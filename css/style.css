@@ -1,0 +1,285 @@
+
+/* body set */
+body{
+	margin:0;
+}
+
+/* TEMPLATE */
+header {
+	display: flex;
+	justify-content: space-between;
+	border:2px solid black;
+	box-sizing: border-box;
+}
+
+header img{
+	width:calc(100px - 4px);
+	height:calc(100px - 4px);
+
+}
+
+header h1{
+	align-self:center;
+	margin-right:1em;
+}
+
+section .section-title{
+	display: flex;
+	justify-content: center;
+	border:2px solid black;
+	box-sizing: border-box;
+	height: calc(50px - 4px);
+	background-color: #a0f97f;
+}
+section .section-title h2{
+	margin:0.3em;
+	align-self: center;
+}
+
+
+section .content{
+	border:2px solid black;
+	height:calc(100vh - 275px);
+	overflow: hidden;
+}
+
+footer {
+	width:100%;
+	position:fixed;
+	bottom:0;
+	z-index: 5;
+	border:2px solid black;
+	box-sizing: border-box;
+	height:calc(89px - 4px);
+	display:flex;
+	justify-content: center;
+	background-color: #a0f97f;
+}
+
+footer h1{
+	align-self: center;
+	text-align: center;
+	margin:0;
+}
+
+
+/* Movies */
+section .content{
+	overflow-y: scroll;
+}
+
+section .content .opened div{
+	height:inherit;
+}
+
+section .content .comic{
+	border:2px solid black;
+	position:relative;
+}
+
+
+section .content .comic img{
+	width: 62px;
+	height: 94px;
+	display:inline-block;
+	vertical-align: center;
+}
+
+section .content .comic div{
+	display: inline-block;
+	width: calc(100% - 66px);
+	vertical-align: top;
+	overflow:hidden;
+}
+
+
+section .content .comic div .btn-info{
+	position: absolute;
+	width:0;
+	width:0;
+}
+
+
+section .content .comic div h2{
+	vertical-align: top;
+	display:inline-block;
+	margin:0;
+	margin-top:0.2em;
+	margin-bottom:0.2em;
+}
+section .content .comic div p{
+	vertical-align: top;
+	display:inline-block;
+	margin-top:0;
+	margin-bottom:0.4em;
+}
+
+section .content .comic div button{
+	position:absolute;
+	top:0.2em;
+	right:4em;
+	padding:0.7em;
+	font-weight: bold;
+	background-color:black;
+	color:white;
+	border:solid 4px black inset;
+}
+
+section .content .comic div button:focus{
+    outline-style: solid;
+    outline-color: blue;
+    outline-width: 4px;
+}
+section .comics-pagination{
+	height: 40px;
+	border-style: solid;
+	box-sizing: border-box;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+section .content .character{
+	border:2px solid black;
+	position:relative;
+}
+
+
+section .content .character img{
+	width: 62px;
+	height: 94px;
+	display:inline-block;
+	vertical-align: center;
+}
+
+section .content .character div{
+	display: inline-block;
+	width: calc(100% - 66px);
+	vertical-align: top;
+	overflow:hidden;
+}
+
+
+section .content .character div .btn-info{
+	position: absolute;
+	width:0;
+	width:0;
+}
+
+
+section .content .character div h2{
+	vertical-align: top;
+	display:inline-block;
+	margin:0;
+	margin-top:0.2em;
+	margin-bottom:0.2em;
+}
+section .content .character div p{
+	vertical-align: top;
+	display:inline-block;
+	margin-top:0;
+	margin-bottom:0.4em;
+}
+
+section .content .character div button{
+	position:absolute;
+	top:0.2em;
+	right:4em;
+	padding:0.7em;
+	font-weight: bold;
+	background-color:black;
+	color:white;
+	border:solid 4px black inset;
+}
+
+section .content .character div button:focus{
+    outline-style: solid;
+    outline-color: blue;
+    outline-width: 4px;
+}
+
+
+section .characters-pagination{
+	height: 40px;
+	border-style: solid;
+	box-sizing: border-box;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+@media only screen and (max-width: 500px) {
+	section .content::-webkit-scrollbar {
+		display: none;
+	}
+
+	section .content .character div h2{
+		margin-right:60px;
+	}
+	section .content .character div button{
+		right:0.2em;
+	}
+	.chart-tab{
+		margin:10px;
+	}
+
+}
+
+@media only screen and (min-width: 500px){
+	.chart-tab{
+		margin-left:20vw;
+		width:60vw;
+		margin-top:20px;
+		border: 4px solid black;
+		padding:40px;
+		box-sizing: border-box;
+		border-radius:5vmin;
+	}
+}
+
+.chart-tab input{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: -50;
+}
+.chart-tab label{
+	position:relative;
+	border: 4px inset;
+	background-color:lightgray;
+	padding:4px;
+	border-radius:9px;
+	margin:5px;
+}
+.chart-tab label:active{
+	border: 3px outset;
+}
+
+
+.chart-tab label:hover{
+	background-color:white;
+}
+.chart-tab .radio-select{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-bottom:20px;
+}
+
+.chart-tab h2{
+	text-align: center;
+}
+
+.not-displayed{
+	display:none;
+}
+
+.spinner{
+	background: url('../img/spinner.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+}
